@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Gullu ❤️</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background:
+            radial-gradient(circle at 50% 20%, #ff9d00 0%, transparent 25%),
+            radial-gradient(circle at 10% 90%, #e91e63 0%, transparent 30%),
+            radial-gradient(circle at 90% 90%, #7b1fa2 0%, transparent 30%),
+            linear-gradient(135deg, #4a075c, #8e0b57, #d84315);
+
+        font-family: Georgia, serif;
+    }
+
+    /* Navratri decorative dots */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+
+        background-image:
+            radial-gradient(circle, #ffd54f 2px, transparent 2px),
+            radial-gradient(circle, #ffeb3b 1.5px, transparent 1.5px);
+
+        background-size: 45px 45px, 70px 70px;
+        background-position: 0 0, 20px 25px;
+
+        opacity: 0.45;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 650px;
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .decor {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .quote {
+        max-width: 600px;
+
+        color: #fff8e1;
+        font-size: 32px;
+        line-height: 1.4;
+        font-weight: bold;
+
+        text-shadow:
+            0 3px 8px rgba(0,0,0,0.5),
+            0 0 15px rgba(255,193,7,0.5);
+
+        margin-bottom: 15px;
+    }
+
+    .gullu {
+        color: #ffd54f;
+    }
+
+    .small-text {
+        color: #ffe0b2;
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    /* Surprise button */
+    .surprise-btn {
+        border: none;
+        outline: none;
+
+        padding: 14px 28px;
+
+        border-radius: 50px;
+
+        background: linear-gradient(135deg, #ffd54f, #ff9800);
+        color: #5d1b00;
+
+        font-size: 17px;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        box-shadow:
+            0 6px 20px rgba(0,0,0,0.3),
+            0 0 15px rgba(255,213,79,0.5);
+
+        transition: 0.3s;
+    }
+
+    .surprise-btn:hover {
+        transform: scale(1.08);
+        box-shadow:
+            0 8px 25px rgba(0,0,0,0.4),
+            0 0 25px rgba(255,213,79,0.8);
+    }
+
+    /* Hidden surprise */
+    .surprise {
+        display: none;
+
+        margin-top: 20px;
+
+        animation: reveal 1s ease forwards;
+    }
+
+    .surprise.show {
+        display: block;
+    }
+
+    @keyframes reveal {
+        from {
+            opacity: 0;
+            transform: scale(0.7) translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+    /* Character area */
+    .character-area {
+        position: relative;
+
+        width: 360px;
+        height: 390px;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        margin: 0 auto;
+    }
+
+    .character {
+        height: 370px;
+        width: auto;
+
+        position: relative;
+        z-index: 2;
+
+        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.35));
+    }
+
+    /* Flying kisses */
+    .kiss {
+        position: absolute;
+        z-index: 5;
+
+        font-size: 34px;
+
+        animation: flyKiss 2.5s ease-in-out infinite;
+    }
+
+    .kiss1 {
+        top: 90px;
+        right: 55px;
+        animation-delay: 0s;
+    }
+
+    .kiss2 {
+        top: 145px;
+        right: 15px;
+        animation-delay: 0.7s;
+    }
+
+    .kiss3 {
+        top: 200px;
+        right: 65px;
+        animation-delay: 1.4s;
+    }
+
+    .kiss4 {
+        top: 125px;
+        right: 105px;
+        animation-delay: 2s;
+    }
+
+    @keyframes flyKiss {
+        0% {
+            opacity: 0;
+            transform: translate(0, 20px) scale(0.5) rotate(-10deg);
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translate(100px, -80px) scale(1.3) rotate(15deg);
+        }
+    }
+
+    .bottom-text {
+        color: #fff3e0;
+        font-size: 19px;
+        font-style: italic;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 500px) {
+
+        .quote {
+            font-size: 25px;
+        }
+
+        .small-text {
+            font-size: 15px;
+        }
+
+        .character-area {
+            width: 300px;
+            height: 330px;
+        }
+
+        .character {
+            height: 315px;
+        }
+
+        .kiss {
+            font-size: 28px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="decor">
+        🪔 ✨ 💃 ✨ 🪔
+    </div>
+
+    <div class="quote">
+        “Even if you didn't win,<br>
+        this is my reward for you,
+        <span class="gullu">Gullu ❤️</span>”
+    </div>
+
+    <div class="small-text">
+        Because for me, you are already a winner. 🥰
+    </div>
+
+    <!-- BUTTON -->
+    <button class="surprise-btn" onclick="openSurprise()">
+        💝 Open Your Surprise
+    </button>
+
+    <!-- HIDDEN PICTURE -->
+    <div class="surprise" id="surprise">
+
+        <div class="character-area">
+
+            <!-- Your character -->
+            <img
+                src="character.png"
+                class="character"
+                alt="Mr. Mermaid"
+            >
+
+            <!-- Flying kisses -->
+            <div class="kiss kiss1">💋</div>
+            <div class="kiss kiss2">💋</div>
+            <div class="kiss kiss3">💋</div>
+            <div class="kiss kiss4">❤️</div>
+
+        </div>
+
+        <div class="bottom-text">
+            From your Mr. Mermaid 🧜‍♂️
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function openSurprise() {
+
+        const surprise = document.getElementById("surprise");
+        const button = document.querySelector(".surprise-btn");
+
+        surprise.classList.add("show");
+
+        button.innerHTML = "❤️ For My Gullu ❤️";
+
+        button.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
